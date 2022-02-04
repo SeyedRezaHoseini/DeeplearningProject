@@ -24,4 +24,10 @@ Our code requires the user to enter a value for maximum target depth so that at 
 closer than this target value will be labeled. The label of the bounding boxes at the output of our code,
 shows both the object type and the estimated depth.
 
-
+<p align="center">
+<image align="center" src = "images/finaltest_1_1.png" width="300">
+</p>
+  
+<p align="center">
+<image align="center" src = "images/finaltest_1_2.png" width="300">
+</p>
