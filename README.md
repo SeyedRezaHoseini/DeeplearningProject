@@ -24,6 +24,15 @@ Our code requires the user to enter a value for maximum target depth so that at 
 closer than this target value will be labeled. The label of the bounding boxes at the output of our code,
 shows both the object type and the estimated depth.
 
+# Architecture Description
+We note that our own strategy to combine object detection and depth estimation networks is
+the same as the joining method used in  <a href="https://ieeexplore.ieee.org/document/8805052">Joint Object Detection and Depth Estimation in Multiplexed Image</a>. In other words, the input image is passed through
+the object detection network (in our case YOLO v5) and after acquiring the bounding boxes of
+respecting objects, these bounding boxes are fed to the depth estimation network (in our case
+hybrid CNN). Then according to ”mean” or ”median” strategy described in report, we can decide whether the specific object is closer than the range user has passed
+to the code or not. As shown in report such joining strategy can yield shorter run-times and
+better EPE metric outcomes.
+
 # Final Test
 ## Testing our joint object detection and depth estimation method by images from NYU-v2 dataset
 <p align="center">
